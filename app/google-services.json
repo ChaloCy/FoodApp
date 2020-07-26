@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "485768737328",
+    "firebase_url": "https://project-9baac.firebaseio.com",
+    "project_id": "project-9baac",
+    "storage_bucket": "project-9baac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:485768737328:android:8f628a59be17d6d21973f5",
+        "android_client_info": {
+          "package_name": "com.inducesmile.androidfoodordering"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "485768737328-emktlf19hikkspuhcmst1fr5mnd653l0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.inducesmile.androidfoodordering",
+            "certificate_hash": "ee7df70574a294c88024079b4ffa7046d4ee6fc3"
+          }
+        },
+        {
+          "client_id": "485768737328-ctok8gid78fgfcbqublce9t5gd7v4v3j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_9m7r4LnupyUf__CrqqCJ6nT-dwUch5s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "485768737328-ctok8gid78fgfcbqublce9t5gd7v4v3j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

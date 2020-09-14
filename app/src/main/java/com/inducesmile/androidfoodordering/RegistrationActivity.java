@@ -39,7 +39,7 @@ public class RegistrationActivity extends AppCompatActivity {
     private EditText username;
     private EditText email;
     private EditText password;
-//    private EditText address;
+    private EditText address;
     private EditText phoneNumber;
 
 
@@ -64,7 +64,7 @@ public class RegistrationActivity extends AppCompatActivity {
         username = (EditText)findViewById(R.id.username);
         email = (EditText)findViewById(R.id.email);
         password = (EditText)findViewById(R.id.password);
-//        address = (EditText)findViewById(R.id.address);
+        address = (EditText)findViewById(R.id.address);
         phoneNumber = (EditText)findViewById(R.id.phone_number);
 
         Button createAccountButton = (Button)findViewById(R.id.create_account_button);
@@ -74,14 +74,13 @@ public class RegistrationActivity extends AppCompatActivity {
                 String enteredUsername = username.getText().toString().trim();
                 String enteredEmail = email.getText().toString().trim();
                 String enteredPassword = password.getText().toString().trim();
-//                String enteredAddress = address.getText().toString();
+                String enteredAddress = address.getText().toString();
                 String enteredPhoneNumber = phoneNumber.getText().toString();
 
                 if(TextUtils.isEmpty(enteredUsername) || TextUtils.isEmpty(enteredEmail) || TextUtils.isEmpty(enteredPassword)
-                         || TextUtils.isEmpty(enteredPhoneNumber)){
+                        || TextUtils.isEmpty(enteredAddress) || TextUtils.isEmpty(enteredPhoneNumber)){
                     Helper.displayErrorMessage(RegistrationActivity.this, getString(R.string.fill_all_fields));
                 }
-//                || TextUtils.isEmpty(enteredAddress)
 
                 if(!Helper.isValidEmail(enteredEmail)){
                     Helper.displayErrorMessage(RegistrationActivity.this, getString(R.string.invalid_email));
@@ -90,20 +89,19 @@ public class RegistrationActivity extends AppCompatActivity {
                 if(enteredUsername.length() < Helper.MINIMUM_LENGTH || enteredPassword.length() < Helper.MINIMUM_LENGTH){
                     Helper.displayErrorMessage(RegistrationActivity.this,getString(R.string.maximum_length));
                 }
-                Log.d(TAG, enteredUsername + enteredEmail + enteredPassword + enteredPhoneNumber);
+                Log.d(TAG, enteredUsername + enteredEmail + enteredPassword + enteredAddress + enteredPhoneNumber);
                 //Add new user to the server
-                addNewUserToRemoteServer(enteredUsername, enteredEmail, enteredPassword, enteredPhoneNumber);
+                addNewUserToRemoteServer(enteredUsername, enteredEmail, enteredPassword, enteredAddress, enteredPhoneNumber);
             }
         });
     }
-//    + enteredAddress
 
-    private void addNewUserToRemoteServer(String username, String email, String password, String phoneNumber){
+    private void addNewUserToRemoteServer(String username, String email, String password, String address, String phoneNumber){
         Map<String, String> params = new HashMap<String,String>();
         params.put(Helper.USERNAME, username);
         params.put(Helper.EMAIL, email);
         params.put(Helper.PASSWORD, password);
-//        params.put(Helper.ADDRESS, address);
+        params.put(Helper.ADDRESS, address);
         params.put(Helper.PHONE_NUMBER, phoneNumber);
 
         GsonRequest<LoginObject> serverRequest = new GsonRequest<LoginObject>(

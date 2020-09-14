@@ -67,18 +67,18 @@
         android:textColor="@color/colorWhite"
         android:padding="@dimen/_12sdp" />
 
-<!--    <EditText-->
-<!--        android:id="@+id/address"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="@dimen/_12sdp"-->
-<!--        android:background="@drawable/bottom_border"-->
-<!--        android:hint="@string/address_hint"-->
-<!--        android:textColorHint="@color/colorExtra"-->
-<!--        android:inputType="textPostalAddress"-->
-<!--        android:maxLines="1"-->
-<!--        android:textColor="@color/colorWhite"-->
-<!--        android:padding="@dimen/_12sdp"/>-->
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:background="@drawable/bottom_border"
+        android:hint="@string/address_hint"
+        android:textColorHint="@color/colorExtra"
+        android:inputType="textPostalAddress"
+        android:maxLines="1"
+        android:textColor="@color/colorWhite"
+        android:padding="@dimen/_12sdp"/>
 
     <EditText
         android:id="@+id/phone_number"

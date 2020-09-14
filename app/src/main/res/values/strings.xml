@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Android Food Ordering</string>
+    <string name="app_name">Eat It</string>
     <string name="slogan">The best restaurant that offers delicious and healthy food in town. Place an order and get it delivered between 2 hours irrespective of your location.</string>
     <string name="get_started">GET STARTED</string>
     <string name="sign_in">SIGN IN</string>

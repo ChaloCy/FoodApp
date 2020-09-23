@@ -8,7 +8,7 @@ import android.net.NetworkInfo;
 public class Constant {
 
     private static final String DIRECTION_API = "https://maps.googleapis.com/maps/api/directions/json?origin=";
-    public static final String API_KEY = "AIzaSyBTvKJ342MugfSXCJHQBGXTB_efMHisYBY";
+    public static final String API_KEY = "AIzaSyAa5hnLr6r-18p-nDze0LMqAOpbI4HuPJE";
 
     public static String getUrl(String originLat, String originLon, String destinationLat, String destinationLon){
         return DIRECTION_API + originLat+","+originLon+"&destination="+destinationLat+","+destinationLon+"&key="+API_KEY;

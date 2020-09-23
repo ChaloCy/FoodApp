@@ -42,7 +42,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryViewHolder>{
 
         // use Glide to download and display the category image.
         String serverImagePath = Helper.PUBLIC_FOLDER + catObject.getMenu_image();
-//        Glide.with(context).load(serverImagePath).diskCacheStrategy(DiskCacheStrategy.ALL).fitCenter().override(300, 300).into(holder.categoryImage);
+        Glide.with(context).load(serverImagePath).diskCacheStrategy(DiskCacheStrategy.ALL).fitCenter().override(300, 300).into(holder.categoryImage);
 
         holder.categoryImage.setOnClickListener(new View.OnClickListener() {
             @Override

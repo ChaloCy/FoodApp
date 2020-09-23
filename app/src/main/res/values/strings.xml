@@ -40,7 +40,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="havana">Havana Restaurant n Bar</string>
-    <string name="location">Nygatan 20, 24241 Horby Sweden</string>
+    <string name="location">MMU-Rongai, Kenya</string>
     <string name="restuarant_home">Restaurant Home</string>
     <string name="opening_hours">Open until 10 pm week days and 11 pm weekends</string>
     <string name="test">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using</string>
@@ -50,7 +50,7 @@
     <string name="pizza">Pizza</string>
     <string name="manu_categories">Menu Categories</string>
     <string name="paparika_salad">Paparika Salad with Chicken</string>
-    <string name="price">$30.00</string>
+    <string name="price">Sh 30.00</string>
     <string name="with_meat">With meat</string>
     <string name="view_details">View details</string>
     <string name="pizza_categories">Pizza Categories</string>
@@ -71,7 +71,7 @@
     <string name="hot_deal_menus">Trending Hot Deals</string>
     <string name="my_profile">Profile</string>
     <string name="philips_johnson">Philips Johnson</string>
-    <string name="profile_address">Nygatan 20, Horby, Sweden</string>
+    <string name="profile_address">9426-00100, Nairobi Kenya</string>
     <string name="address">Address: </string>
     <string name="phone">Phone:</string>
     <string name="phone_number">+46720199164</string>
@@ -84,7 +84,7 @@
     <string name="view_detail">View details</string>
     <string name="view_hot_deals">VIEW HOT DEALS</string>
     <string name="edit_user_profile">Edit User Profile</string>
-    <string name="cannot_edit_user">Cannot edit user! Please try again</string>
+    <string name="cannot_edit_user">Cannot load menu! Please try again</string>
     <string name="update_success">User profile successfully update</string>
     <string name="customize_your_order">CUSTOMIZE YOUR ORDER</string>
     <string name="no_information">No information found about this menu</string>
@@ -93,9 +93,9 @@
     <string name="order_items">Items: </string>
     <string name="two">2</string>
     <string name="total">Total: </string>
-    <string name="amount">$49.50</string>
+    <string name="amount">Sh 49.50</string>
     <string name="total_amount">Amount</string>
-    <string name="vat_amount">$0.00</string>
+    <string name="vat_amount">Sh 0.00</string>
     <string name="order_vat">VAT:</string>
     <string name="subtotal">Subtotal:</string>
     <string name="checkout">CHECKOUT</string>

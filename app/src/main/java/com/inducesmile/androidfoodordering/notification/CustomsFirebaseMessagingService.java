@@ -1,4 +1,4 @@
-package com.inducesmile.notification;
+package com.inducesmile.androidfoodordering.notification;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -17,12 +17,6 @@ import com.inducesmile.androidfoodordering.R;
 public class CustomsFirebaseMessagingService extends FirebaseMessagingService {
 
     private static final String TAG = CustomsFirebaseMessagingService.class.getSimpleName();
-
-    @Override
-    public void onNewToken(String s) {
-        super.onNewToken(s);
-        Log.e("NEW_TOKEN",s);
-    }
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {

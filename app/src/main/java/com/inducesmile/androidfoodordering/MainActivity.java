@@ -22,9 +22,10 @@ import com.inducesmile.androidfoodordering.Fragment.HomeFragment;
 import com.inducesmile.androidfoodordering.Fragment.MenuCategoryFragment;
 import com.inducesmile.androidfoodordering.Fragment.OrderHistoryFragment;
 import com.inducesmile.androidfoodordering.Fragment.ProfileFragment;
+import com.inducesmile.androidfoodordering.notification.NotificationActivity;
 import com.inducesmile.androidfoodordering.util.CustomApplication;
 import com.inducesmile.androidfoodordering.util.DrawCart;
-import com.inducesmile.notification.NotificationActivity;
+
 
 public class MainActivity extends AppCompatActivity {
 

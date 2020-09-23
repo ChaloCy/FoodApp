@@ -1,4 +1,4 @@
-package com.inducesmile.notification;
+package com.inducesmile.androidfoodordering.notification;
 
 
 public class Helper {

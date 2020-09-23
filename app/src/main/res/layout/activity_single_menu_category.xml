@@ -16,7 +16,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
         android:hint="@string/search"
-        android:inputType="textPassword"
+        android:inputType="textAutoComplete"
         android:maxLines="1"
         android:padding="@dimen/_8sdp"
         android:textColor="@color/colorBlack" />

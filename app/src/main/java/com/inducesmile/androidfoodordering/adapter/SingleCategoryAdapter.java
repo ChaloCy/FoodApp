@@ -45,7 +45,7 @@ public class SingleCategoryAdapter extends RecyclerView.Adapter<SingleCategoryVi
 
         // use Glide to download and display the category image.
         String serverImagePath = Helper.PUBLIC_FOLDER + singleItem.getItem_picture();
-//        Glide.with(context).load(serverImagePath).diskCacheStrategy(DiskCacheStrategy.ALL).fitCenter().override(150, 150).into(holder.foodImage);
+        Glide.with(context).load(serverImagePath).diskCacheStrategy(DiskCacheStrategy.ALL).fitCenter().override(150, 150).into(holder.foodImage);
 
         holder.foodName.setText(singleItem.getItem_name());
         holder.foodPrice.setText("$" + String.valueOf(singleItem.getItem_price()) + "0");

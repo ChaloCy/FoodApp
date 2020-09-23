@@ -55,7 +55,7 @@ public class SingleMenuCategoryActivity extends AppCompatActivity {
 
         GsonRequest<MenuItemObject[]> serverRequest = new GsonRequest<MenuItemObject[]>(
                 Request.Method.POST,
-                Helper.PATH_TO_MENU_ITEM_BY_CATEGORY,
+                Helper.PATH_TO_MENU_ITEM_BY_CATEGORY + "?" + Helper.MENU_ID + "=" + id,
                 MenuItemObject[].class,
                 params,
                 createRequestSuccessListener(),

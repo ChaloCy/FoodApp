@@ -43,7 +43,7 @@ public class Helper {
     public static final String RESTAURANT = "RESTAURANT";
     public static final String SHARED_PREF = "SHARED_PREFERENCE";
 
-    public static final String CLIENT_ID = "";
+    public static final String CLIENT_ID = "AegQnY91UCUqtXkFhfXubhczs57ubNBGsycStdQ5lB3Ne2UstHWy2GakKcdp05SKrJlo-5rMPzkLrsYq";
 
     public static final int MINIMUM_LENGTH = 5;
 

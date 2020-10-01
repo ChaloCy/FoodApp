@@ -38,17 +38,7 @@ public class HotDealActvity extends AppCompatActivity {
     private final int delay = 2000;
     private int page = 0;
 
-    Runnable runnable = new Runnable() {
-        public void run() {
-            if (mAdapter.getCount() == page) {
-                page = 0;
-            } else {
-                page++;
-            }
-            viewPager.setCurrentItem(page, true);
-            handler.postDelayed(this, delay);
-        }
-    };
+    Runnable runnable = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +88,20 @@ public class HotDealActvity extends AppCompatActivity {
 
                         mAdapter = new CustomViewPagerAdapter(HotDealActvity.this, hotDealList);
                         viewPager.setAdapter(mAdapter);
+
+                        Runnable runnable = new Runnable() {
+                           public void run() {
+                              if (mAdapter.getCount() == page) {
+                                  page = 0;
+                               } else {
+                                  page++;
+                              }
+
+                              viewPager.setCurrentItem(page, true);
+                              handler.postDelayed(this, delay);
+                             }
+                          };
+
                         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
                             @Override
                             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -116,7 +120,7 @@ public class HotDealActvity extends AppCompatActivity {
                                     case 2:
                                         radioGroup.check(R.id.radioButton3);
                                         break;
-                                }
+                                 }
                             }
 
                             @Override
@@ -148,12 +152,16 @@ public class HotDealActvity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        handler.postDelayed(runnable, delay);
+        if (runnable!=null) {
+            handler.postDelayed(runnable, delay);
+        }
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        handler.removeCallbacks(runnable);
+        if (runnable!=null) {
+            handler.removeCallbacks(runnable);
+        }
     }
 }

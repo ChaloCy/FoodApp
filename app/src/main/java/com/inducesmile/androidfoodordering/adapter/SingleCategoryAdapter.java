@@ -48,7 +48,7 @@ public class SingleCategoryAdapter extends RecyclerView.Adapter<SingleCategoryVi
         Glide.with(context).load(serverImagePath).diskCacheStrategy(DiskCacheStrategy.ALL).fitCenter().override(150, 150).into(holder.foodImage);
 
         holder.foodName.setText(singleItem.getItem_name());
-        holder.foodPrice.setText("$" + String.valueOf(singleItem.getItem_price()) + "0");
+        holder.foodPrice.setText("Sh" + String.valueOf(singleItem.getItem_price()) + "0");
 
         Gson gson = ((CustomApplication)((Activity)context).getApplication()).getGsonObject();
         final String objectToString = gson.toJson(singleItem);

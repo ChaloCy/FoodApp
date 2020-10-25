@@ -9,8 +9,11 @@ import android.widget.TextView;
 
 import androidx.viewpager.widget.PagerAdapter;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.inducesmile.androidfoodordering.R;
 import com.inducesmile.androidfoodordering.entities.HotDealObject;
+import com.inducesmile.androidfoodordering.util.Helper;
 
 import java.util.List;
 
@@ -54,9 +57,17 @@ public class CustomViewPagerAdapter extends PagerAdapter {
         TextView hotDealFoodDescription = (TextView)view.findViewById(R.id.hot_deal_food_description);
 
         //bind value to the View Widgets
-        hotDealPrice.setText("$" + String.valueOf(mHotDealObject.getItem_price()) + "0");
+        hotDealPrice.setText("Sh" + String.valueOf(mHotDealObject.getItem_price()) + "0");
         hotDealFoodName.setText(mHotDealObject.getItem_name());
         hotDealFoodDescription.setText(mHotDealObject.getDescription());
+
+        String pic = Helper.PUBLIC_FOLDER +
+                mHotDealObject.getItem_picture();
+
+        Glide.with(context)
+                .load(pic)
+                .apply(new RequestOptions().override(900, 900))
+                .into(hotDealFoodImage);
 
         container.addView(view);
         return view;

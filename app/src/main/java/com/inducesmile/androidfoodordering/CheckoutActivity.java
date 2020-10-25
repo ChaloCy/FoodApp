@@ -104,9 +104,9 @@ public class CheckoutActivity extends AppCompatActivity {
         orderItemCount.setText(String.valueOf(checkoutOrder.size()));
         DrawCart drawCart = new DrawCart(this);
         subTotal = drawCart.getSubtotalAmount(checkoutOrder);
-        orderTotalAmount.setText("$" + String.valueOf(subTotal) + "0");
+        orderTotalAmount.setText("Sh" + String.valueOf(subTotal) + "0");
         orderVat.setText("0.00");
-        orderFullAmount.setText("$" + String.valueOf(subTotal) + "0");
+        orderFullAmount.setText("Sh" + String.valueOf(subTotal) + "0");
 
 
         RecyclerView checkoutRecyclerView = (RecyclerView)findViewById(R.id.checkout_item);
@@ -153,7 +153,9 @@ public class CheckoutActivity extends AppCompatActivity {
 
                 if(paymentMethod.equals("PAY PAL")){
                     initializePayPalPayment();
-                }else if(paymentMethod.equals("CREDIT CARD")){
+                }else if(paymentMethod.equals("M-PESA")){
+                    Intent mpesaIntent = new Intent(CheckoutActivity.this, MpesaActivity.class);
+                    startActivity(mpesaIntent);
 
                 }else{
                     postCheckoutOrderToRemoteServer(String.valueOf(user.getId()), String.valueOf(checkoutOrder.size()), String.valueOf(subTotal), paymentMethod, finalList);
@@ -189,8 +191,11 @@ public class CheckoutActivity extends AppCompatActivity {
                     case R.id.pay_pal_payment:
                         paymentMethod = "PAY PAL";
                         break;
-                    case R.id.credit_card_payment:
-                        paymentMethod = "CREDIT CARD";
+//                    case R.id.credit_card_payment:
+//                        paymentMethod = "CREDIT CARD";
+//                        break;
+                    case R.id.mpesa:
+                        paymentMethod="M-PESA";
                         break;
                     case R.id.cash_on_delivery:
                         paymentMethod = "CASH ON DELIVERY";

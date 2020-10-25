@@ -286,7 +286,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:src="@drawable/cash"
+                    android:src="@drawable/cash2"
                     android:layout_marginBottom="@dimen/_24sdp"
                     android:contentDescription="@string/add_note"/>
 
@@ -308,14 +308,14 @@
                         android:text="@string/pay_with_pay_pal"/>
 
                     <RadioButton
-                        android:id="@+id/credit_card_payment"
+                        android:id="@+id/mpesa"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
                         android:textColor="@color/colorBorder"
                         android:textSize="@dimen/_15sdp"
                         android:layout_marginBottom="@dimen/_32sdp"
-                        android:text="@string/pay_with_credit_card"/>
+                        android:text="@string/pay_with_mpesa"/>
 
                     <RadioButton
                         android:id="@+id/cash_on_delivery"
@@ -324,7 +324,17 @@
                         android:textStyle="bold"
                         android:textColor="@color/colorBorder"
                         android:textSize="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_32sdp"
                         android:text="@string/pay_cash_on_delivery"/>
+
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/mpesa"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textColor="@color/colorBorder"-->
+<!--                        android:textSize="@dimen/_15sdp"-->
+<!--                        android:text="@string/pay_with_mpesa"/>-->
 
                 </RadioGroup>
 

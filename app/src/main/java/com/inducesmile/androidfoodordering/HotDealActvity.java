@@ -83,7 +83,7 @@ public class HotDealActvity extends AppCompatActivity {
                         List<HotDealObject> hotDealList = new ArrayList<>();
                         for(int i = 0; i < response.length; i++){
                             Log.d(TAG, "Menu name " + response[i].getItem_name());
-                            hotDealList.add(new HotDealObject(response[i].getItem_name(), response[i].getDescription(), response[i].getItem_price()));
+                            hotDealList.add(new HotDealObject(response[i].getItem_name(), response[i].getDescription(),response[i].getItem_picture(), response[i].getItem_price()));
                         }
 
                         mAdapter = new CustomViewPagerAdapter(HotDealActvity.this, hotDealList);

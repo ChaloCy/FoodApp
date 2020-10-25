@@ -34,7 +34,7 @@ public class CheckoutAdapter extends RecyclerView.Adapter<CheckoutViewHolder>{
         CartObject cartObject = checkoutList.get(position);
         holder.checkoutName.setText(cartObject.getOrderName());
         holder.checkoutQuantity.setText(String.valueOf(cartObject.getQuantity()) + " x");
-        holder.checkoutPrice.setText("$" + String.valueOf(cartObject.getPrice()) + "0");
+        holder.checkoutPrice.setText("Sh" + String.valueOf(cartObject.getPrice()) + "0");
     }
 
     @Override

@@ -106,13 +106,13 @@ public class CartActivity extends AppCompatActivity {
             orderItemCount.setText(String.valueOf(orderedItems.size()));
             DrawCart drawCart = new DrawCart(this);
             double subtotal = drawCart.getSubtotalAmount(orderedItems);
-            orderTotalAmount.setText("$" + String.valueOf(subtotal));
+            orderTotalAmount.setText("Sh" + String.valueOf(subtotal));
         }
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void messageEventFromAdapter(EventMessage event){
-        orderTotalAmount.setText("$" + event.getSubtotal());
+        orderTotalAmount.setText("Sh" + event.getSubtotal());
         orderItemCount.setText(event.getItemCount());
     }
     @Override

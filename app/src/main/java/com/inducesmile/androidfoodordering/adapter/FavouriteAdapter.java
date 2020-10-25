@@ -41,7 +41,7 @@ public class FavouriteAdapter extends RecyclerView.Adapter<FavouriteViewHolder>{
 
         Glide.with(context).load(fObject.getImagePath()).diskCacheStrategy(DiskCacheStrategy.ALL).fitCenter().override(250, 250).into(holder.path);
         holder.name.setText(fObject.getName());
-        holder.price.setText("$" + String.valueOf(fObject.getPrice()) + "0");
+        holder.price.setText("Sh" + String.valueOf(fObject.getPrice()) + "0");
 
         holder.path.setOnClickListener(new View.OnClickListener() {
             @Override

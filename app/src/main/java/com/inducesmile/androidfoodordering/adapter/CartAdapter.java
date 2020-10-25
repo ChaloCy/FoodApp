@@ -48,7 +48,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartViewHolder> {
         holder.orderItemName.setText(cartObject.getOrderName());
         holder.orderItemExtra.setText(cartObject.getExtra());
         holder.orderQuantity.setText(String.valueOf(cartObject.getQuantity()));
-        holder.orderSubtotal.setText("$" + String.valueOf(cartObject.getPrice()) + "0");
+        holder.orderSubtotal.setText("Sh" + String.valueOf(cartObject.getPrice()) + "0");
 
         holder.removeOrder.setOnClickListener(new View.OnClickListener() {
             @Override

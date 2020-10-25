@@ -89,6 +89,8 @@
     <string name="customize_your_order">CUSTOMIZE YOUR ORDER</string>
     <string name="no_information">No information found about this menu</string>
     <string name="no_option_item">There is no option in this menu item</string>
+    <string name="mpesa_meso">M-pesa will send you a promt requiring you to confirm the transaction by entering your PIN</string>
+    <string name="phone_no">+25471234568</string>
     <string name="add_note_to_menu_item_optional">Add note to menu item (optional)</string>
     <string name="order_items">Items: </string>
     <string name="two">2</string>
@@ -111,10 +113,12 @@
     <string name="add_new_delivery_address">ADD NEW DELIVERY ADDRESS</string>
     <string name="select_payment_method">ADD NEW CARD PAYMENT</string>
     <string name="place_an_order_now">PLACE AN ORDER NOW</string>
+    <string name="pay_now">PAY NOW</string>
     <string name="select_a_payment_method">SELECT A PAYMENT METHOD</string>
     <string name="pay_with_pay_pal">PAY WITH PAY PAL</string>
     <string name="pay_with_credit_card">PAY WITH CREDIT CARD</string>
     <string name="pay_cash_on_delivery">PAY CASH ON DELIVERY</string>
+    <string name="pay_with_mpesa">PAY WITH M-PESA</string>
     <string name="your_primary_address">YOUR PRIMARY ADDRESS</string>
     <string name="street">Street</string>
     <string name="zip_code">Zip code</string>

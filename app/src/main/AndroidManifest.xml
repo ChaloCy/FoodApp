@@ -15,6 +15,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".MpesaActivity"></activity>
         <activity android:name=".IntroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,11 +30,13 @@
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar">
-<!--        <intent-filter>-->
-<!--            <action android:name="android.intent.action.MAIN" />-->
 
-<!--            <category android:name="android.intent.category.LAUNCHER" />-->
-<!--        </intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity android:name=".SingleMenuCategoryActivity" />
         <activity android:name=".FoodActivity" />
@@ -55,7 +58,8 @@
             android:label="@string/title_activity_order_tracking" />
         <activity android:name="com.inducesmile.notification.NotificationActivity" />
 
-        <service android:name="com.inducesmile.notification.CustomsFirebaseMessagingService"
+        <service
+            android:name="com.inducesmile.notification.CustomsFirebaseMessagingService"
             android:stopWithTask="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -67,7 +71,7 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".OrderListActivity"></activity>
+        <activity android:name=".OrderListActivity" />
     </application>
 
 </manifest>

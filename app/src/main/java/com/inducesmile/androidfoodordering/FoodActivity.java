@@ -110,11 +110,11 @@ public class FoodActivity extends AppCompatActivity {
             setTitle(singleMenuItem.getItem_name());
 
             String serverImagePath = Helper.PUBLIC_FOLDER + singleMenuItem.getItem_picture();
-//            Glide.with(FoodActivity.this).load(serverImagePath).diskCacheStrategy(DiskCacheStrategy.ALL).fitCenter().override(300, 300).into(menuItemImage);
+            Glide.with(FoodActivity.this).load(serverImagePath).diskCacheStrategy(DiskCacheStrategy.ALL).fitCenter().override(300, 150).into(menuItemImage);
 
             menuItemName.setText(singleMenuItem.getItem_name());
             menuItemDescription.setText(singleMenuItem.getDescription());
-            menuItemPrice.setText("$" + String.valueOf(singleMenuItem.getItem_price()) + "0");
+            menuItemPrice.setText("Sh" + String.valueOf(singleMenuItem.getItem_price()) + "0");
         }else {
             Toast.makeText(FoodActivity.this, getString(R.string.no_information), Toast.LENGTH_LONG).show();
         }

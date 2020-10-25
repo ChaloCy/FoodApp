@@ -124,9 +124,9 @@ public class OrderListActivity extends AppCompatActivity {
         DrawCart drawCart = new DrawCart(this);
         double subTotal = drawCart.getSubtotalAmount(allOrder);
 
-        orderTotalAmount.setText("$" + String.valueOf(subTotal));
-        orderVat.setText("$0.00");
-        orderFullAmount.setText("$" + String.valueOf(subTotal));
+        orderTotalAmount.setText("Sh" + String.valueOf(subTotal));
+        orderVat.setText("Sh0.00");
+        orderFullAmount.setText("Sh" + String.valueOf(subTotal));
     }
 
     private String restaurantDetails(int index){

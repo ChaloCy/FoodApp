@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -154,8 +155,7 @@ public class CheckoutActivity extends AppCompatActivity {
                 if(paymentMethod.equals("PAY PAL")){
                     initializePayPalPayment();
                 }else if(paymentMethod.equals("M-PESA")){
-                    Intent mpesaIntent = new Intent(CheckoutActivity.this, MpesaActivity.class);
-                    startActivity(mpesaIntent);
+                    handleMpesaPayment(String.valueOf(user.getId()), String.valueOf(checkoutOrder.size()), String.valueOf(subTotal), paymentMethod, finalList);
 
                 }else{
                     postCheckoutOrderToRemoteServer(String.valueOf(user.getId()), String.valueOf(checkoutOrder.size()), String.valueOf(subTotal), paymentMethod, finalList);
@@ -266,6 +266,21 @@ public class CheckoutActivity extends AppCompatActivity {
                 error.printStackTrace();
             }
         };
+    }
+
+    private void handleMpesaPayment(String userId, String quantity, String price, String payment_method, String order_list){
+        // Save the order and get the order id from server
+        final HashMap<String, String> params = new HashMap<String,String>();
+        params.put("USER_ID", userId);
+        params.put("QUANTITY", quantity);
+        params.put("PRICE", price);
+        params.put("PAYMENT", payment_method);
+        params.put("ORDER_LIST", order_list);
+
+        // Pass the order to the mpesa activity
+        Intent mpesaIntent = new Intent(CheckoutActivity.this, MpesaActivity.class);
+        mpesaIntent.putExtra("order", params);
+        startActivity(mpesaIntent);
     }
 
     private void initializePayPalPayment(){

@@ -11,7 +11,7 @@ import java.util.Locale;
 
 public class Helper {
 
-    public static final String PUBLIC_FOLDER = "http://192.168.43.66/restaurant/public/";
+    public static final String PUBLIC_FOLDER = "http://192.168.43.51/web/restaurant/public/";
     public static final String PATH_TO_SERVER_LOGIN = PUBLIC_FOLDER + "signin";
     public static final String PATH_TO_SERVER_REGISTRATION = PUBLIC_FOLDER + "register";
     public static final String PATH_TO_RESTAURANT_HOME = PUBLIC_FOLDER + "mobilerestuarant";
@@ -22,6 +22,9 @@ public class Helper {
     public static final String PATH_TO_MENU_ITEM_BY_CATEGORY = PUBLIC_FOLDER + "mobilemenuitem";
     public static final String PATH_TO_PLACE_ORDER = PUBLIC_FOLDER + "placeorder";
     public static final String PATH_TO_ALL_ORDER = PUBLIC_FOLDER + "allorders";
+
+    public static final String PATH_TO_ORDER_WITH_MPESA_OPTION = PUBLIC_FOLDER + "placeorder/with-mpesa";
+//    public static final String PATH_TO_INITIATE_MPESA_PAYMENT = PUBLIC_FOLDER + "payment/initiate";
 
 
     public static final String NEW_ACCOUNT = "Don't have an account yet?";
